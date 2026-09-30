@@ -1,0 +1,18 @@
+{
+  "name": "mern-project-root",
+  "version": "1.0.0",
+  "description": "MERN Stack Student Management System - Root Orchestrator",
+  "scripts": {
+    "install:all": "npm install --prefix student-management/backend && npm install --prefix student-management/frontend",
+    "dev:backend": "npm run dev --prefix student-management/backend",
+    "dev:frontend": "npm run dev --prefix student-management/frontend",
+    "start:backend": "npm start --prefix student-management/backend",
+    "start:frontend": "npm run dev --prefix student-management/frontend",
+    "db:check": "npm run db:check --prefix student-management/backend",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "start": "concurrently \"npm run start:backend\" \"npm run dev:frontend\""
+  },
+  "dependencies": {
+    "concurrently": "^9.2.4"
+  }
+}
